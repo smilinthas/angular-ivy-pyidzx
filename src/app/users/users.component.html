@@ -1,0 +1,10 @@
+<h1>User Registration</h1>
+<div class="mb-2">
+  Users List - <a routerLink="['users', 'add']">Add new user</a>
+</div>
+<div *ngFor="let user of appService.users" class="mb-2">
+  <div routerLink="/users/{{ user.id }}">Name: {{ user.name }}</div>
+  <div>Address: {{ user.address }}</div>
+</div>
+<button class="btn mr-2" (click)="onBuy()">BuyItems</button>
+<button class="btn mr-2" (click)="onLogout()">LogOut</button>

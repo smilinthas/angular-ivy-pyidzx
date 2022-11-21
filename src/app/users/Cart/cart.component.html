@@ -1,0 +1,21 @@
+<h1>Buy Items</h1>
+<div class="mb-2">
+  <div class="mb-2">
+	Item: <input [(ngModel)]="itemName"/>
+  </div>
+	<div class="mb-2">
+		Count: <input [(ngModel)]="itemCount"/>
+  </div>
+  <button class="btn mr-2" (click)="onCart(itemName,itemCount)">AddToCart</button>
+  <button class="btn mr-2" (click)="onBuy()">Buy</button>
+  <button class="btn mr-2" (click)="onBack()">Back</button>
+</div>
+<div>
+{{paidMessage}}
+<h3>AddedItems</h3>
+</div>
+<div *ngFor="let item of appService.items" class="mb-2">
+  <div >Item: {{ item.itemName }}</div>
+  <div>Count: {{ item.itemCount }}</div>
+</div>
+  

@@ -1,0 +1,14 @@
+<h1>Bill</h1>
+<ng-template host></ng-template>
+<div class="mb-2">
+  <h3>Your Total Bill</h3>
+  <div class="mb-2">
+	AmountPayable: <input [(ngModel)]="amount"/>
+  <button (click)="payBill()" >Pay</button>
+  {{paidMessage}}
+  <div>
+  <button (click)="back()" >Back</button>
+  </div>
+  </div>
+  
+	
