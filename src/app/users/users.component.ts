@@ -9,7 +9,7 @@ import { AppService } from '../app.service';
 })
 export class UsersComponent  {
 
-
+highlight;
   constructor(public appService: AppService,
     private router: Router,
     private route: ActivatedRoute){
@@ -21,5 +21,11 @@ export class UsersComponent  {
   }
   onBuy(){
     this.router.navigateByUrl("/cart");
+  }
+
+  onColor(){
+    this.appService.getColor(this.highlight);
+
+
   }
 }

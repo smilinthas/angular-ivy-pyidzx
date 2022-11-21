@@ -15,10 +15,11 @@ import { CartComponent } from './users/Cart/cart.component';
 import { BillComponent } from './users/Bill/bill.component';
 import { AddressComponent } from './users/address/address.component';
 import { HostDirective } from './host.directive';
+import { HighLightDirective } from './users/highlight.directive';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, UsersComponent, AddEditUserComponent,LoginComponent ,ErrorComponent,CartComponent,BillComponent,AddressComponent,HostDirective],
+  declarations: [ AppComponent, HelloComponent, UsersComponent, AddEditUserComponent,LoginComponent ,ErrorComponent,CartComponent,BillComponent,AddressComponent,HostDirective,HighLightDirective],
   entryComponents:[AddressComponent],
   providers: [AppService],
   bootstrap:    [ AppComponent ]

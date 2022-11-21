@@ -1,4 +1,4 @@
-<h1>User Registration</h1>
+<h1 highlight ="blue">User Registration</h1>
 <div class="mb-2">
   Users List - <a routerLink="['users', 'add']">Add new user</a>
 </div>
@@ -8,3 +8,7 @@
 </div>
 <button class="btn mr-2" (click)="onBuy()">BuyItems</button>
 <button class="btn mr-2" (click)="onLogout()">LogOut</button>
+<div class="mb-2">
+ColorTheme: <input [(ngModel)]="highlight"/>
+<button class="btn mr-2" (click)="onColor()">Color</button>
+</div>

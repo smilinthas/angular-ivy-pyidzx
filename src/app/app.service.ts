@@ -20,6 +20,7 @@ export class AppService {
   public count = 2;
   public itemCounting = 1;
   public total=0;
+ public highlight;
 
   public getUser(id) {
     const index = this.users.map(x => x.id).indexOf(id);
@@ -57,4 +58,10 @@ export class AppService {
   public deleteUser(id: number) {
     this.users = this.users.filter(x => x.id !== id);
   }
+
+  public getColor(color) {
+    this.highlight=color;
+  }
+
+  
 }

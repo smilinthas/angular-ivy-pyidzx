@@ -30,7 +30,6 @@ childRef:HostDirective;
     compRef.instance.message="Your Item will Reach you soon"
     this.success ="Your Item will Reach you soon"
     this.paidMessage= "Bill Paid"
-    
   }
 
   back(){

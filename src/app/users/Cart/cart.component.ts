@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, VERSION, ViewContainerRef } from "@angular/core";
+import { Component, HostBinding, HostListener, Input, VERSION, ViewContainerRef } from "@angular/core";
 import {  Router } from "@angular/router";
 import { AppService, Item, User } from "../../app.service";
 
@@ -12,7 +12,7 @@ export class CartComponent {
  id:any;
  itemName:string;
  itemCount:number;
-@HostBinding('style.color') color='red';
+
 @Input() paidMessage:string;
   constructor(public appService: AppService,private router: Router,public viewRef:ViewContainerRef
   ) {
@@ -26,7 +26,6 @@ ngOnInit(){
     this.item.itemCount=itemCount;
     this.appService.addItemsToCart(this.item);
     const loginUser =this.appService.getUser(this.id);
-    this.color ='blue';
   }
 
   onBuy(){
